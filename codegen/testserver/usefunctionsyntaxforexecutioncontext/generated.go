@@ -1205,7 +1205,7 @@ func fieldContext_Query___schema(_ context.Context, ec *executionContext, field 
 	return fc, nil
 }
 
-func _Subscription_userCreated(ctx context.Context, ec *executionContext, field graphql.CollectedField) (ret func(ctx context.Context) graphql.Marshaler) {
+func _Subscription_userCreated(ctx context.Context, ec *executionContext, field graphql.CollectedField) (ret func(ctx context.Context) (context.Context, graphql.Marshaler)) {
 	return graphql.ResolveFieldStream(
 		ctx,
 		ec.OperationContext,
