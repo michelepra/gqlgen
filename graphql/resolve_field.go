@@ -66,7 +66,7 @@ func ResolveFieldStream[T any](
 						w.Write([]byte{'{'})
 						MarshalString(field.Alias).MarshalGQL(w)
 						w.Write([]byte{':'})
-						marshal(ctx, field.Selections, *v.GetField()).MarshalGQL(w)
+						marshal(ctx, field.Selections, v.GetField()).MarshalGQL(w)
 						w.Write([]byte{'}'})
 					})
 				case <-ctx.Done():

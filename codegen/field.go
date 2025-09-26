@@ -543,7 +543,7 @@ func (f *Field) ShortResolverSignature(ft *goast.FuncType) string {
 
 	result := templates.CurrentImports.LookupType(f.TypeReference.GO)
 	if f.Object.Stream {
-		result = "<-chan graphql.StreamField[" + templates.CurrentImports.LookupType(f.TypeReference.Target) + "]"
+		result = "<-chan graphql.StreamField[" + result + "]"
 	}
 	// Named return.
 	var namedV, namedE string
